@@ -45,6 +45,7 @@ void GtpUser::initialize(int stage)
     //=============================================
 }
 
+
 void GtpUser::handleMessage(cMessage *msg)
 {
     if (strcmp(msg->getArrivalGate()->getFullName(), "trafficFlowFilterGate") == 0)
@@ -62,6 +63,7 @@ void GtpUser::handleMessage(cMessage *msg)
         handleFromUdp(gtpMsg);
     }
 }
+
 
 void GtpUser::handleFromTrafficFlowFilter(IPv4Datagram * datagram)
 {

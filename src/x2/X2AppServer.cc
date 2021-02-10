@@ -69,6 +69,8 @@ void X2AppServer::generateAndSend(cPacket* pkt)
 
 void X2AppServer::handleMessage(cMessage *msg)
 {
+
+
     cPacket* pkt = check_and_cast<cPacket*>(msg);
     cGate* incoming = pkt->getArrivalGate();
     if (incoming == x2ManagerIn_)
